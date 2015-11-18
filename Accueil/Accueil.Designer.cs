@@ -107,11 +107,14 @@
             // 
             // imgAvatar
             // 
+            this.imgAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgAvatar.Image = global::Accueil.Properties.Resources.avatar;
             this.imgAvatar.Location = new System.Drawing.Point(37, 38);
             this.imgAvatar.Name = "imgAvatar";
             this.imgAvatar.Size = new System.Drawing.Size(107, 101);
             this.imgAvatar.TabIndex = 1;
             this.imgAvatar.TabStop = false;
+            this.imgAvatar.Click += new System.EventHandler(this.imgAvatar_Click);
             // 
             // Accueil
             // 

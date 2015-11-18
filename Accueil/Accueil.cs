@@ -38,5 +38,10 @@ namespace Accueil
         {
 
         }
+
+        private void imgAvatar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
