@@ -29,7 +29,7 @@ namespace Accueil
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //Accès à l'écran accueil
+            //Accès à l'écran Discussion
             Discussion discussion = new Discussion();
             discussion.Show();
         }
