@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.btnConnexion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtMdp = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,26 +44,6 @@
             this.btnConnexion.UseVisualStyleBackColor = true;
             this.btnConnexion.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Login :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 186);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 20);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Mot de passe :";
-            // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -73,6 +51,8 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(161, 20);
             this.txtId.TabIndex = 6;
+            this.txtId.Text = "Login";
+            this.txtId.Click += new System.EventHandler(this.txtId_Click);
             this.txtId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyDown);
             // 
             // txtMdp
@@ -82,6 +62,8 @@
             this.txtMdp.Name = "txtMdp";
             this.txtMdp.Size = new System.Drawing.Size(161, 20);
             this.txtMdp.TabIndex = 7;
+            this.txtMdp.Text = "Mot de passe";
+            this.txtMdp.Click += new System.EventHandler(this.txtMdp_Click);
             // 
             // button1
             // 
@@ -91,7 +73,6 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-         //   this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Login
             // 
@@ -102,8 +83,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMdp);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConnexion);
             this.Name = "Login";
             this.Text = "Login";
@@ -116,8 +95,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnConnexion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtMdp;
         private System.Windows.Forms.Button button1;
