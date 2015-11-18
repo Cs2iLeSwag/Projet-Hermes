@@ -39,15 +39,5 @@ namespace Accueil
                 txtMdp.Focus();
             }
         }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button122222_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
