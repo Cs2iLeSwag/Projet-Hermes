@@ -40,6 +40,17 @@ namespace Accueil
             }
         }
 
+        private void txtId_Click(object sender, EventArgs e)
+        {
+            txtId.Text = "";
+        }
+
+        private void txtMdp_Click(object sender, EventArgs e)
+        {
+            txtMdp.Text = "";
+            txtMdp.PasswordChar = (char)0x25CF; 
+        }
+
      /*   private void button1_Click_1(object sender, EventArgs e)
         {
             Profil profil = new Profil();
