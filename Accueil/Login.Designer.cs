@@ -33,7 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtMdp = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button122222 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnexion
@@ -83,15 +83,14 @@
             this.txtMdp.Size = new System.Drawing.Size(161, 20);
             this.txtMdp.TabIndex = 7;
             // 
-            // button1
+            // button122222
             // 
-            this.button1.Location = new System.Drawing.Point(273, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button122222.Location = new System.Drawing.Point(228, 59);
+            this.button122222.Name = "button122222";
+            this.button122222.Size = new System.Drawing.Size(75, 23);
+            this.button122222.TabIndex = 8;
+            this.button122222.Text = "button12344.";
+            this.button122222.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -99,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(427, 357);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button122222);
             this.Controls.Add(this.txtMdp);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
@@ -120,7 +119,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtMdp;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button122222;
     }
 }
 
