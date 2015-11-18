@@ -33,11 +33,11 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnConnexion = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDiscussion = new System.Windows.Forms.Button();
+            this.btnAbsence = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,23 +78,16 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnConnexion
             // 
-            this.button1.Location = new System.Drawing.Point(215, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 50);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(286, 158);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 50);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnConnexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnexion.ForeColor = System.Drawing.Color.Transparent;
+            this.btnConnexion.Image = ((System.Drawing.Image)(resources.GetObject("btnConnexion.Image")));
+            this.btnConnexion.Location = new System.Drawing.Point(215, 132);
+            this.btnConnexion.Name = "btnConnexion";
+            this.btnConnexion.Size = new System.Drawing.Size(51, 50);
+            this.btnConnexion.TabIndex = 2;
+            this.btnConnexion.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -125,17 +118,28 @@
             this.btnDiscussion.UseVisualStyleBackColor = true;
             this.btnDiscussion.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnAbsence
+            // 
+            this.btnAbsence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbsence.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAbsence.Image = ((System.Drawing.Image)(resources.GetObject("btnAbsence.Image")));
+            this.btnAbsence.Location = new System.Drawing.Point(285, 132);
+            this.btnAbsence.Name = "btnAbsence";
+            this.btnAbsence.Size = new System.Drawing.Size(51, 50);
+            this.btnAbsence.TabIndex = 7;
+            this.btnAbsence.UseVisualStyleBackColor = true;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.btnAbsence);
             this.Controls.Add(this.btnDiscussion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Accueil";
@@ -155,10 +159,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnConnexion;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDiscussion;
+        private System.Windows.Forms.Button btnAbsence;
     }
 }
