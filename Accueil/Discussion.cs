@@ -16,5 +16,14 @@ namespace Accueil
         {
             InitializeComponent();
         }
+
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            //Ouvre un panel de couleur pour changer la couleur d'écriture
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTxtBoxMessage.ForeColor = colorDialog1.Color;
+            }
+        }
     }
 }
