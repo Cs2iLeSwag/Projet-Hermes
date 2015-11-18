@@ -33,5 +33,10 @@ namespace Accueil
             Discussion discussion = new Discussion();
             discussion.Show();
         }
+
+        private void btnConnexion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
