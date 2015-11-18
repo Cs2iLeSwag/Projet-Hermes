@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtMdp = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnConnexion
@@ -82,12 +83,20 @@
             this.txtMdp.Size = new System.Drawing.Size(161, 20);
             this.txtMdp.TabIndex = 7;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(284, 65);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(96, 20);
+            this.textBox1.TabIndex = 8;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(427, 357);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtMdp);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
@@ -108,6 +117,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtMdp;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
