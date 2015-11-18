@@ -33,6 +33,7 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.lblName = new System.Windows.Forms.Label();
             this.btnDiscussion = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnHG = new System.Windows.Forms.Button();
             this.btnAbsence = new System.Windows.Forms.Button();
             this.btnConnexion = new System.Windows.Forms.Button();
@@ -45,8 +46,8 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripDropDownButton1});
+            this.toolStripDropDownButton1,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(784, 25);
@@ -81,6 +82,18 @@
             this.btnDiscussion.Text = "Discussion";
             this.btnDiscussion.UseVisualStyleBackColor = true;
             this.btnDiscussion.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Accueil.Properties.Resources.songOff;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(12, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(48, 51);
+            this.button1.TabIndex = 9;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnHG
             // 
@@ -118,7 +131,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(24, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(36, 59);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 101);
             this.pictureBox1.TabIndex = 1;
@@ -139,6 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHG);
             this.Controls.Add(this.btnAbsence);
             this.Controls.Add(this.btnDiscussion);
@@ -168,5 +182,6 @@
         private System.Windows.Forms.Button btnDiscussion;
         private System.Windows.Forms.Button btnAbsence;
         private System.Windows.Forms.Button btnHG;
+        private System.Windows.Forms.Button button1;
     }
 }
