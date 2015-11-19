@@ -97,24 +97,6 @@
             this.btnColor.UseVisualStyleBackColor = true;
             this.btnColor.Click += new System.EventHandler(this.btnColor_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Accueil.Properties.Resources.test01;
-            this.pictureBox2.Location = new System.Drawing.Point(365, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(107, 100);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Accueil.Properties.Resources.test01;
-            this.pictureBox1.Location = new System.Drawing.Point(365, 236);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 94);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // Discussion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
