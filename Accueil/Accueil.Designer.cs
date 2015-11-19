@@ -42,7 +42,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe Print", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(162, 30);
+            this.lblName.Location = new System.Drawing.Point(172, 24);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(272, 56);
             this.lblName.TabIndex = 5;
@@ -65,18 +65,20 @@
             this.btnSong.BackgroundImage = global::Accueil.Properties.Resources.songOff;
             this.btnSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSong.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSong.Location = new System.Drawing.Point(13, 19);
+            this.btnSong.Image = global::Accueil.Properties.Resources.songOff;
+            this.btnSong.Location = new System.Drawing.Point(24, 24);
             this.btnSong.Name = "btnSong";
             this.btnSong.Size = new System.Drawing.Size(48, 51);
             this.btnSong.TabIndex = 9;
             this.btnSong.UseVisualStyleBackColor = false;
+            this.btnSong.Click += new System.EventHandler(this.btnSong_Click);
             // 
             // btnHG
             // 
             this.btnHG.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHG.ForeColor = System.Drawing.Color.Transparent;
             this.btnHG.Image = global::Accueil.Properties.Resources.connectOff;
-            this.btnHG.Location = new System.Drawing.Point(323, 89);
+            this.btnHG.Location = new System.Drawing.Point(321, 88);
             this.btnHG.Name = "btnHG";
             this.btnHG.Size = new System.Drawing.Size(51, 50);
             this.btnHG.TabIndex = 8;
@@ -87,7 +89,7 @@
             this.btnAbsence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbsence.ForeColor = System.Drawing.Color.Transparent;
             this.btnAbsence.Image = global::Accueil.Properties.Resources.connectPause;
-            this.btnAbsence.Location = new System.Drawing.Point(248, 89);
+            this.btnAbsence.Location = new System.Drawing.Point(247, 88);
             this.btnAbsence.Name = "btnAbsence";
             this.btnAbsence.Size = new System.Drawing.Size(51, 50);
             this.btnAbsence.TabIndex = 7;
@@ -98,7 +100,7 @@
             this.btnConnexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnexion.ForeColor = System.Drawing.Color.Transparent;
             this.btnConnexion.Image = global::Accueil.Properties.Resources.connect;
-            this.btnConnexion.Location = new System.Drawing.Point(172, 89);
+            this.btnConnexion.Location = new System.Drawing.Point(175, 88);
             this.btnConnexion.Name = "btnConnexion";
             this.btnConnexion.Size = new System.Drawing.Size(51, 50);
             this.btnConnexion.TabIndex = 2;
@@ -107,14 +109,11 @@
             // 
             // imgAvatar
             // 
-            this.imgAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imgAvatar.Image = global::Accueil.Properties.Resources.avatar;
-            this.imgAvatar.Location = new System.Drawing.Point(37, 38);
+            this.imgAvatar.Location = new System.Drawing.Point(56, 36);
             this.imgAvatar.Name = "imgAvatar";
-            this.imgAvatar.Size = new System.Drawing.Size(107, 101);
-            this.imgAvatar.TabIndex = 1;
+            this.imgAvatar.Size = new System.Drawing.Size(110, 103);
+            this.imgAvatar.TabIndex = 10;
             this.imgAvatar.TabStop = false;
-            this.imgAvatar.Click += new System.EventHandler(this.imgAvatar_Click);
             // 
             // Accueil
             // 

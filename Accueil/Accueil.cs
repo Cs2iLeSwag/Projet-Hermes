@@ -39,7 +39,13 @@ namespace Accueil
 
         }
 
-        private void imgAvatar_Click(object sender, EventArgs e)
+        private void btnConnexion_MouseEnter(object sender, EventArgs e)
+        {
+            this.Opacity = 0.8;
+            Cursor = Cursors.NoMove2D;
+        }
+
+        private void btnSong_Click(object sender, EventArgs e)
         {
 
         }
