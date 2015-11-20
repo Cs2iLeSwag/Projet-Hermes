@@ -113,6 +113,12 @@
     <Content Include="Resources\Avatar\test01.png" />
     <None Include="Resources\test01.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Commun\Commun.csproj">
+      <Project>{d51db238-494f-4f45-9f41-ff1b849acb3f}</Project>
+      <Name>Commun</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

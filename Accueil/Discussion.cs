@@ -25,5 +25,10 @@ namespace Accueil
                 richTxtBoxMessage.ForeColor = colorDialog1.Color;
             }
         }
+
+        private void btnEnvoyer_Click(object sender, EventArgs e)
+        {
+            lstBoxMessage.Items.Add("Moi : " + richTxtBoxMessage.Text);
+        }
     }
 }

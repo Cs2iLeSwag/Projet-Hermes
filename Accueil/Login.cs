@@ -29,6 +29,9 @@ namespace Accueil
             else
             {
                 MessageBox.Show("Erreur de connexion, l'identifiant ou le mot de passe est incorrecte");
+                txtId.Text = "";
+                txtMdp.Text = "";
+                txtId.Focus();
             }
         }
 
@@ -48,7 +51,8 @@ namespace Accueil
         private void txtMdp_Click(object sender, EventArgs e)
         {
             txtMdp.Text = "";
-            txtMdp.PasswordChar = (char)0x25CF; 
+            //Permet de cacher le champ par des "*"
+            txtMdp.UseSystemPasswordChar = true;
         }
 
      /*   private void button1_Click_1(object sender, EventArgs e)

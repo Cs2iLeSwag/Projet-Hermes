@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accueil", "Accueil\Accueil.csproj", "{9B23C5AB-A514-48BF-88DC-EEAA8740C085}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socket_Serveur", "Socket_Serveur\Socket_Serveur.csproj", "{A3AA4285-620D-417D-9D0C-325F3606BCF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commun", "Commun\Commun.csproj", "{D51DB238-494F-4F45-9F41-FF1B849ACB3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{9B23C5AB-A514-48BF-88DC-EEAA8740C085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B23C5AB-A514-48BF-88DC-EEAA8740C085}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B23C5AB-A514-48BF-88DC-EEAA8740C085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3AA4285-620D-417D-9D0C-325F3606BCF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3AA4285-620D-417D-9D0C-325F3606BCF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3AA4285-620D-417D-9D0C-325F3606BCF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3AA4285-620D-417D-9D0C-325F3606BCF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D51DB238-494F-4F45-9F41-FF1B849ACB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D51DB238-494F-4F45-9F41-FF1B849ACB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D51DB238-494F-4F45-9F41-FF1B849ACB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D51DB238-494F-4F45-9F41-FF1B849ACB3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
