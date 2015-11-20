@@ -93,9 +93,19 @@ namespace Accueil.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap songOff {
-            get {
+        internal static System.Drawing.Bitmap songOff
+        {
+            get
+            {
                 object obj = ResourceManager.GetObject("songOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap songOn
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("songOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
