@@ -16,6 +16,5 @@ namespace Commun
 {
     class Program
     {
-      
     }
 }
