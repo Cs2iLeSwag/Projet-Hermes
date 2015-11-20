@@ -115,7 +115,15 @@
             this.imgAvatar.Size = new System.Drawing.Size(110, 103);
             this.imgAvatar.TabIndex = 10;
             this.imgAvatar.TabStop = false;
-
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(155, 249);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(474, 92);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Accueil
             // 

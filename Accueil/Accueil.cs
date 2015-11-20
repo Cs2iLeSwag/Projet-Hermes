@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Resources;
 using System.Windows.Forms;
 
 namespace Accueil
@@ -47,7 +48,9 @@ namespace Accueil
 
         private void btnSong_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("The calculations are complete");
+            ResourceManager rm = new ResourceManager("MyRes", typeof(Accueil).Assembly); 
+            btnSong.Image = (Bitmap)rm.GetObject("songOn");
         }
 
     }
