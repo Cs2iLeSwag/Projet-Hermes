@@ -13,6 +13,9 @@ namespace Accueil
 {
     public partial class Accueil : Form
     {
+        Bitmap songOn = Properties.Resources.songOn;
+        Bitmap songOff = Properties.Resources.songOff;
+
         public Accueil()
         {
             InitializeComponent();
@@ -40,17 +43,47 @@ namespace Accueil
 
         }
 
-        private void btnConnexion_MouseEnter(object sender, EventArgs e)
-        {
-            this.Opacity = 0.8;
-            Cursor = Cursors.NoMove2D;
-        }
-
         private void btnSong_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The calculations are complete");
-            ResourceManager rm = new ResourceManager("MyRes", typeof(Accueil).Assembly); 
-            btnSong.Image = (Bitmap)rm.GetObject("songOn");
+            if (btnSong.Image == songOff)
+            {
+                btnSong.Image = songOn;
+            }
+            else
+            {
+                btnSong.Image = songOff;
+            }
+        }
+
+        private void btnHG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Accueil_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConnexion_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConnexion_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void btnConnexion_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnConnexion_MouseLeave(object sender, EventArgs e)
+        {
+            btnConnexion.BackColor = Color.White;
+            Cursor = Cursors.Default;
         }
 
     }

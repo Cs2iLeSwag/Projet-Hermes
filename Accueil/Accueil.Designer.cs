@@ -35,7 +35,6 @@
             this.btnAbsence = new System.Windows.Forms.Button();
             this.btnConnexion = new System.Windows.Forms.Button();
             this.imgAvatar = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +83,7 @@
             this.btnHG.Size = new System.Drawing.Size(51, 50);
             this.btnHG.TabIndex = 8;
             this.btnHG.UseVisualStyleBackColor = true;
+            this.btnHG.Click += new System.EventHandler(this.btnHG_Click);
             // 
             // btnAbsence
             // 
@@ -107,6 +107,9 @@
             this.btnConnexion.TabIndex = 2;
             this.btnConnexion.UseVisualStyleBackColor = true;
             this.btnConnexion.Click += new System.EventHandler(this.btnConnexion_Click);
+            this.btnConnexion.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnConnexion_MouseDown);
+            this.btnConnexion.MouseEnter += new System.EventHandler(this.btnConnexion_MouseEnter);
+            this.btnConnexion.MouseLeave += new System.EventHandler(this.btnConnexion_MouseLeave);
             // 
             // imgAvatar
             // 
@@ -116,22 +119,12 @@
             this.imgAvatar.TabIndex = 10;
             this.imgAvatar.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(155, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(474, 92);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSong);
             this.Controls.Add(this.btnHG);
             this.Controls.Add(this.btnAbsence);
@@ -157,6 +150,5 @@
         private System.Windows.Forms.Button btnAbsence;
         private System.Windows.Forms.Button btnHG;
         private System.Windows.Forms.Button btnSong;
-        private System.Windows.Forms.Button button1;
     }
 }
