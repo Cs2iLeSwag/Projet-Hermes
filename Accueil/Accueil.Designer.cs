@@ -72,6 +72,7 @@
             this.btnSong.TabIndex = 9;
             this.btnSong.UseVisualStyleBackColor = false;
             this.btnSong.Click += new System.EventHandler(this.btnSong_Click);
+            this.btnSong.MouseEnter += new System.EventHandler(this.btnSong_MouseEnter);
             // 
             // btnHG
             // 

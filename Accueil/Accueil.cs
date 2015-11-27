@@ -86,5 +86,10 @@ namespace Accueil
             Cursor = Cursors.Default;
         }
 
+        private void btnSong_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
     }
 }
