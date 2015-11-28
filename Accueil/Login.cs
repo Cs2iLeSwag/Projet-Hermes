@@ -39,6 +39,7 @@ namespace Accueil
         {
             if (e.KeyCode == Keys.Enter)
             {
+                txtMdp.UseSystemPasswordChar = true;
                 txtMdp.Focus();
             }
         }
