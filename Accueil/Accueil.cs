@@ -45,6 +45,12 @@ namespace Accueil
 
         private void btnSong_Click(object sender, EventArgs e)
         {
+            var msg = new Message();
+            msg.HWnd = this.Handle;
+            msg.Msg = 0x319;              // WM_APPCOMMAND
+            msg.WParam = this.Handle;
+            msg.LParam = (IntPtr)0x80000; // APPCOMMAND_VOLUME_MUTE
+            this.DefWndProc(ref msg);
             if (btnSong.Image == songOff)
             {
                 btnSong.Image = songOn;
