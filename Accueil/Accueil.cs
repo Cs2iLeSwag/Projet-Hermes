@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
-using System.Resources;
 using System.Windows.Forms;
 
 namespace Accueil
@@ -49,14 +49,15 @@ namespace Accueil
             msg.HWnd = this.Handle;
             msg.Msg = 0x319;              // WM_APPCOMMAND
             msg.WParam = this.Handle;
-            msg.LParam = (IntPtr)0x80000; // APPCOMMAND_VOLUME_MUTE
             this.DefWndProc(ref msg);
-            if (btnSong.Image == songOff)
+            if (btnSong.Image == songOff && msg.LParam.Equals((IntPtr)0x80000))
             {
                 btnSong.Image = songOn;
+
             }
             else
             {
+            msg.LParam = (IntPtr)0x80000; // APPCOMMAND_VOLUME_MUTE
                 btnSong.Image = songOff;
             }
         }
