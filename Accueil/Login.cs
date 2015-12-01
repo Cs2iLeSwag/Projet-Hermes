@@ -103,6 +103,10 @@ namespace Accueil
         private void btnMdp_MouseLeave(object sender, EventArgs e)
         {
             txtMdp.UseSystemPasswordChar = true;
+            if (txtMdp.Text == "   Mot de passe")
+            {
+                txtMdp.Text = "";
+            }
         }
 
         private void btnMdp_MouseEnter(object sender, EventArgs e)
@@ -118,6 +122,11 @@ namespace Accueil
         private void txtMdp_Click(object sender, EventArgs e)
         {
             reset();
+        }
+
+        private void btnMdp_Click(object sender, EventArgs e)
+        {
+
         }
 
 
