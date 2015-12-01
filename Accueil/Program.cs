@@ -18,22 +18,6 @@ namespace Accueil
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            string Conx = "Server=195.154.107.234;Port=5432;Database=hermes;User Id=erwann;Password=lapinou";
-            NpgsqlConnection cnx = new NpgsqlConnection(Conx);
-
-            NpgsqlCommand MyCmd = null;
-            NpgsqlConnection MyCnx = null;
-            DataTable MyData = new DataTable();
-            NpgsqlDataAdapter da;
-            MyCnx = new NpgsqlConnection(Conx);
-            MyCnx.Open();
-
-            string select = "SELECT * FROM \"personne\"";
-            MyCmd = new NpgsqlCommand(select, MyCnx);
-            da = new NpgsqlDataAdapter(MyCmd);
-            da.Fill(MyData);
-            foreach
-            MyCnx.Close();
            
             try
             {
