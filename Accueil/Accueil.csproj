@@ -152,6 +152,9 @@
   <ItemGroup>
     <Content Include="Properties\songOn.png" />
     <Content Include="Resources\Avatar\test01.png" />
+    <None Include="Resources\connecterBouton.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\eye.png" />
     <Content Include="Resources\songOn.png" />
     <None Include="Resources\songOn1.png" />
     <None Include="Resources\test01.png" />

@@ -22,6 +22,10 @@ namespace Accueil
             InitializeComponent();
             Utilisateurs u = new Utilisateurs();
             DataTable d = u.SelectOneUser(1);
+            foreach (DataRow row in d.Rows)
+            {
+                MessageBox.Show(row["nom"].ToString());
+            }
 
         }
 

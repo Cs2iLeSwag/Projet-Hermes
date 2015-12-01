@@ -44,5 +44,21 @@ namespace Accueil
                 MyCnx.Close();
                 return MyData;
             }
+
+            public DataTable ConnectOneUser(string login, string mdp)
+            {
+                DataTable MyData = new DataTable();
+                NpgsqlDataAdapter da;
+                MyCnx = new NpgsqlConnection(Conx);
+                MyCnx.Open();
+                string select = "SELECT * FROM \"U_USER\" WHERE \"login\"=:login AND \"mdp\"=:mdp";
+                MyCmd = new NpgsqlCommand(select, MyCnx);
+                MyCmd.Parameters.Add(new NpgsqlParameter("login", NpgsqlDbType.Varchar)).Value = login;
+                MyCmd.Parameters.Add(new NpgsqlParameter("mdp", NpgsqlDbType.Varchar)).Value = mdp;
+                da = new NpgsqlDataAdapter(MyCmd);
+                da.Fill(MyData);
+                MyCnx.Close();
+                return MyData;
+            }
     }
 }

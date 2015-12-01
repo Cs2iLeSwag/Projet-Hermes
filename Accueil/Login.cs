@@ -15,12 +15,19 @@ namespace Accueil
         public Login()
         {
             InitializeComponent();
+            txtId.GotFocus += new EventHandler(this.loginGotFocus);
+            txtId.LostFocus += new EventHandler(this.loginLostFocus);
+            txtMdp.GotFocus += new EventHandler(this.MdpGotFocus);
+            txtMdp.LostFocus += new EventHandler(this.MdpLostFocus);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Utilisateurs u = new Utilisateurs();
+            DataTable d = u.ConnectOneUser(txtId.Text, txtMdp.Text);
+
             //Traitement de connexion avec Active Directory 
-            if (txtId.Text == "admin" & txtMdp.Text == "admin")
+            if (d.Rows.Count > 0)
             {
                 //Accès à l'écran accueil
                 Accueil accueil = new Accueil();
@@ -44,21 +51,53 @@ namespace Accueil
             }
         }
 
-        private void txtId_Click(object sender, EventArgs e)
+
+        public void loginLostFocus(object sender, EventArgs e)
         {
-            txtId.Text = "";
+            if (txtId.Text == "")
+            {
+                txtId.Text = "   Login";
+            }
         }
 
-        private void txtMdp_Click(object sender, EventArgs e)
+        public void loginGotFocus(object sender, EventArgs e)
         {
-            txtMdp.Text = "";
-            //Permet de cacher le champ par des "*"
-            txtMdp.UseSystemPasswordChar = true;
+            if (txtId.Text == "   Login")
+            {
+                txtId.Text = "";
+            }
+        }
+
+        public void MdpLostFocus(object sender, EventArgs e)
+        {
+            if (txtMdp.Text == "")
+            {
+                txtMdp.Text = "   Mot de passe";
+            }
+        }
+
+        public void MdpGotFocus(object sender, EventArgs e)
+        {
+            if (txtMdp.Text == "   Mot de passe")
+            {
+                txtMdp.Text = "";
+                txtMdp.UseSystemPasswordChar = true;
+            }
         }
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtMdp.UseSystemPasswordChar = false;
+        }
+
+        private void btnMdp_MouseLeave(object sender, EventArgs e)
+        {
+            txtMdp.UseSystemPasswordChar = true;
         }
 
      /*   private void button1_Click_1(object sender, EventArgs e)
