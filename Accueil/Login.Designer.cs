@@ -47,6 +47,7 @@
             this.txtId.Size = new System.Drawing.Size(406, 23);
             this.txtId.TabIndex = 6;
             this.txtId.Text = "   Login";
+            this.txtId.Click += new System.EventHandler(this.txtId_Click);
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             this.txtId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyDown);
             // 
@@ -61,6 +62,7 @@
             this.txtMdp.Size = new System.Drawing.Size(406, 23);
             this.txtMdp.TabIndex = 9;
             this.txtMdp.Text = "   Mot de passe";
+            this.txtMdp.Click += new System.EventHandler(this.txtMdp_Click);
             // 
             // btnMdp
             // 

@@ -21,6 +21,17 @@ namespace Accueil
             txtMdp.LostFocus += new EventHandler(this.MdpLostFocus);
         }
 
+        private void reset()
+        {
+            if (txtId.BackColor == Color.FromArgb(255, 255, 255))
+            {
+            txtId.BackColor = Color.FromArgb(255, 255, 255);
+            txtMdp.BackColor = Color.FromArgb(255, 255, 255);
+            txtId.ForeColor = System.Drawing.Color.FromArgb(45, 217, 56);
+            txtMdp.ForeColor = System.Drawing.Color.FromArgb(45, 217, 56);
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Utilisateurs u = new Utilisateurs();
@@ -97,6 +108,16 @@ namespace Accueil
         private void btnMdp_MouseLeave(object sender, EventArgs e)
         {
             txtMdp.UseSystemPasswordChar = true;
+        }
+
+        private void txtId_Click(object sender, EventArgs e)
+        {
+            reset();
+        }
+
+        private void txtMdp_Click(object sender, EventArgs e)
+        {
+            reset();
         }
 
      /*   private void button1_Click_1(object sender, EventArgs e)
