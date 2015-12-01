@@ -82,7 +82,7 @@ namespace Accueil
         {
             if (txtMdp.Text == "")
             {
-                txtMdp.Text = "   Mot de passe";
+                //txtMdp.Text = "   Mot de passe";
             }
         }
 
@@ -100,14 +100,14 @@ namespace Accueil
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            txtMdp.UseSystemPasswordChar = false;
-        }
-
         private void btnMdp_MouseLeave(object sender, EventArgs e)
         {
             txtMdp.UseSystemPasswordChar = true;
+        }
+
+        private void btnMdp_MouseEnter(object sender, EventArgs e)
+        {
+            txtMdp.UseSystemPasswordChar = false;
         }
 
         private void txtId_Click(object sender, EventArgs e)
@@ -119,6 +119,7 @@ namespace Accueil
         {
             reset();
         }
+
 
      /*   private void button1_Click_1(object sender, EventArgs e)
         {

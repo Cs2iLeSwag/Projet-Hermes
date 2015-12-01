@@ -76,7 +76,7 @@
             this.btnMdp.Size = new System.Drawing.Size(41, 37);
             this.btnMdp.TabIndex = 11;
             this.btnMdp.UseVisualStyleBackColor = false;
-            this.btnMdp.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnMdp.MouseEnter += new System.EventHandler(this.btnMdp_MouseEnter);
             this.btnMdp.MouseLeave += new System.EventHandler(this.btnMdp_MouseLeave);
             // 
             // pictureBox1
