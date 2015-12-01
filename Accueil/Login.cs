@@ -36,19 +36,18 @@ namespace Accueil
             else
             {
                 MessageBox.Show("Erreur de connexion, l'identifiant ou le mot de passe est incorrecte");
-                txtId.Text = "";
-                txtMdp.Text = "";
-                txtId.Focus();
+                txtId.BackColor = Color.FromArgb(243, 229, 229);
+                txtMdp.BackColor = Color.FromArgb(243, 229, 229);
+                txtId.ForeColor = System.Drawing.Color.FromArgb(196, 150, 152);
+                txtMdp.ForeColor = System.Drawing.Color.FromArgb(196, 150, 152);
+                txtId.Text = "   Login";
+                txtMdp.UseSystemPasswordChar = false;
+                txtMdp.Text = "   Mot de passe";
             }
         }
 
         private void txtId_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                txtMdp.UseSystemPasswordChar = true;
-                txtMdp.Focus();
-            }
         }
 
 
