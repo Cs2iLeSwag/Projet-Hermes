@@ -43,6 +43,7 @@ namespace Accueil
                 //Accès à l'écran accueil
                 Accueil accueil = new Accueil();
                 accueil.Show();
+                this.Hide();
             }
             else
             {
