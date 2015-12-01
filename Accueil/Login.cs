@@ -15,24 +15,25 @@ namespace Accueil
         public Login()
         {
             InitializeComponent();
+            txtMdp.UseSystemPasswordChar = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //Traitement de connexion avec Active Directory 
-            if (txtId.Text == "admin" & txtMdp.Text == "admin")
-            {
+         /*   if (txtId.Text == "admin" & txtMdp.Text == "admin")
+            {*/
                 //Accès à l'écran accueil
                 Accueil accueil = new Accueil();
                 accueil.Show();
-            }
+            /*}
             else
             {
                 MessageBox.Show("Erreur de connexion, l'identifiant ou le mot de passe est incorrecte");
                 txtId.Text = "";
                 txtMdp.Text = "";
                 txtId.Focus();
-            }
+            }*/
         }
 
         private void txtId_KeyDown(object sender, KeyEventArgs e)
