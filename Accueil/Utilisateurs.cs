@@ -30,15 +30,15 @@ namespace Accueil
                 return MyData;
             }
 
-            public DataTable SelectOneUser(string pidUser)
+            public DataTable SelectOneUser(int pidUser)
             {
                 DataTable MyData = new DataTable();
                 NpgsqlDataAdapter da;
                 MyCnx = new NpgsqlConnection(Conx);
                 MyCnx.Open();
-                string select = "SELECT * FROM \"U_USER\" WHERE idUser=:pidUser";
-                MyCmd.Parameters.Add(new NpgsqlParameter("pidUser", NpgsqlDbType.Varchar)).Value = pidUser;
+                string select = "SELECT * FROM \"U_USER\" WHERE \"idUser\"=:pidUser";
                 MyCmd = new NpgsqlCommand(select, MyCnx);
+                MyCmd.Parameters.Add(new NpgsqlParameter("pidUser", NpgsqlDbType.Integer)).Value = pidUser;
                 da = new NpgsqlDataAdapter(MyCmd);
                 da.Fill(MyData);
                 MyCnx.Close();

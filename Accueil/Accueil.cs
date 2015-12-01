@@ -8,6 +8,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
 
 namespace Accueil
 {
@@ -19,6 +20,9 @@ namespace Accueil
         public Accueil()
         {
             InitializeComponent();
+            Utilisateurs u = new Utilisateurs();
+            DataTable d = u.SelectOneUser(1);
+
         }
 
         private void Accueil_Load(object sender, EventArgs e)
