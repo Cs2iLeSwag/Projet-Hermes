@@ -60,6 +60,16 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\Desktop\test\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.2.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\test\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql.resources">
+      <HintPath>..\..\..\..\Desktop\test\fr\Npgsql.resources.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
@@ -93,6 +103,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilisateurs.cs" />
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,7 +150,13 @@
     <None Include="Resources\songOff.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Properties\songOn.png" />
     <Content Include="Resources\Avatar\test01.png" />
+    <None Include="Resources\connecterBouton.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\eye.png" />
+    <Content Include="Resources\songOn.png" />
+    <None Include="Resources\songOn1.png" />
     <None Include="Resources\test01.png" />
   </ItemGroup>
   <ItemGroup>

@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
-using System.Resources;
 using System.Windows.Forms;
 
 namespace Accueil
@@ -19,6 +18,13 @@ namespace Accueil
         public Accueil()
         {
             InitializeComponent();
+            Utilisateurs u = new Utilisateurs();
+            DataTable d = u.SelectOneUser(1);
+            foreach (DataRow row in d.Rows)
+            {
+                MessageBox.Show(row["nom"].ToString());
+            }
+
         }
 
         private void Accueil_Load(object sender, EventArgs e)
@@ -45,12 +51,19 @@ namespace Accueil
 
         private void btnSong_Click(object sender, EventArgs e)
         {
-            if (btnSong.Image == songOff)
+            var msg = new Message();
+            msg.HWnd = this.Handle;
+            msg.Msg = 0x319;              // WM_APPCOMMAND
+            msg.WParam = this.Handle;
+            this.DefWndProc(ref msg);
+            if (btnSong.Image == songOff && msg.LParam.Equals((IntPtr)0x80000))
             {
                 btnSong.Image = songOn;
+
             }
             else
             {
+            msg.LParam = (IntPtr)0x80000; // APPCOMMAND_VOLUME_MUTE
                 btnSong.Image = songOff;
             }
         }

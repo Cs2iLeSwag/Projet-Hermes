@@ -73,6 +73,16 @@ namespace Accueil.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap connecterBouton {
+            get {
+                object obj = ResourceManager.GetObject("connecterBouton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap connectOff {
             get {
                 object obj = ResourceManager.GetObject("connectOff", resourceCulture);
@@ -93,18 +103,38 @@ namespace Accueil.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap songOff
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap eye {
+            get {
+                object obj = ResourceManager.GetObject("eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap songOff {
+            get {
                 object obj = ResourceManager.GetObject("songOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        internal static System.Drawing.Bitmap songOn
-        {
-            get
-            {
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap songOn {
+            get {
                 object obj = ResourceManager.GetObject("songOn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }

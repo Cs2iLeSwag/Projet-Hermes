@@ -65,7 +65,7 @@
             this.btnSong.BackgroundImage = global::Accueil.Properties.Resources.songOff;
             this.btnSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSong.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSong.Image = global::Accueil.Properties.Resources.songOff;
+            this.btnSong.Image = global::Accueil.Properties.Resources.songOn;
             this.btnSong.Location = new System.Drawing.Point(24, 24);
             this.btnSong.Name = "btnSong";
             this.btnSong.Size = new System.Drawing.Size(48, 51);
