@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtMdp = new System.Windows.Forms.TextBox();
             this.btnMdp = new System.Windows.Forms.Button();
@@ -117,9 +118,11 @@
             this.Controls.Add(this.txtMdp);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnConnexion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
             this.TransparencyKey = System.Drawing.Color.White;
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
