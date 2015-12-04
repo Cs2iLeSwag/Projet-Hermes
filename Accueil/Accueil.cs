@@ -15,21 +15,22 @@ namespace Accueil
         Bitmap songOn = Properties.Resources.songOn;
         Bitmap songOff = Properties.Resources.songOff;
 
-        public Accueil()
+        public Accueil(int id)
         {
             InitializeComponent();
             Utilisateurs u = new Utilisateurs();
-            DataTable d = u.SelectOneUser(1);
+            DataTable d = u.SelectOneUser(id);
             foreach (DataRow row in d.Rows)
             {
-                MessageBox.Show(row["nom"].ToString());
+               lblName.Text = row["nom"].ToString() + " "   + row["prenom"].ToString();
             }
+            
 
         }
 
         private void Accueil_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -102,6 +103,12 @@ namespace Accueil
         private void btnSong_MouseEnter(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
+        }
+
+        private void imgAvatar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog f = new OpenFileDialog(); //création d'une fenetre d'exploration 
+            f.ShowDialog(); // affichage de cette fenetre 
         }
 
     }

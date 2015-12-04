@@ -119,6 +119,7 @@
             this.imgAvatar.Size = new System.Drawing.Size(110, 103);
             this.imgAvatar.TabIndex = 10;
             this.imgAvatar.TabStop = false;
+            this.imgAvatar.Click += new System.EventHandler(this.imgAvatar_Click);
             // 
             // Accueil
             // 

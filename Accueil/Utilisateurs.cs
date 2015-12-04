@@ -12,7 +12,7 @@ namespace Accueil
 {
     public class Utilisateurs
     {
-        string Conx = "Server=195.154.107.234;Port=5432;Database=hermes;User Id=dev;Password=1lOv3*y0U";
+        string Conx = "Server=195.154.107.234;Port=5432;Database=hermes;User Id=dev;Password=1l0v3*y0U";
             NpgsqlCommand MyCmd = null;
             NpgsqlConnection MyCnx = null;
 
@@ -51,7 +51,7 @@ namespace Accueil
                 NpgsqlDataAdapter da;
                 MyCnx = new NpgsqlConnection(Conx);
                 MyCnx.Open();
-                string select = "SELECT * FROM \"U_USER\" WHERE \"login\"=:login AND \"mdp\"=:mdp";
+                string select = "SELECT * FROM \"U_USER\" WHERE \"pseudo\"=:login AND \"mdp\"=:mdp";
                 MyCmd = new NpgsqlCommand(select, MyCnx);
                 MyCmd.Parameters.Add(new NpgsqlParameter("login", NpgsqlDbType.Varchar)).Value = login;
                 MyCmd.Parameters.Add(new NpgsqlParameter("mdp", NpgsqlDbType.Varchar)).Value = mdp;

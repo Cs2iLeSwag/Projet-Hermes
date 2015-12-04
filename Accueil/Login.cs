@@ -55,12 +55,16 @@ namespace Accueil
             DataTable d = u.ConnectOneUser(txtId.Text, mdp);
 
             //Traitement de connexion avec Active Directory 
-            if (d.Rows.Count > 0)
+            if (d.Rows.Count > 0 && d.Rows.Count < 2)
             {
                 //Accès à l'écran accueil
-                Accueil accueil = new Accueil();
-                accueil.Show();
-                this.Hide();
+                foreach (DataRow row in d.Rows) // Loop over the rows.
+	            {
+                   int id = Int32.Parse(row["idUser"].ToString());
+                    Accueil accueil = new Accueil(id);
+                    accueil.Show();
+                    this.Hide();
+                }
             }
             else
             {
