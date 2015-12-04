@@ -12,7 +12,7 @@ namespace Accueil
 {
     public class Utilisateurs
     {
-            string Conx = "Server=195.154.107.234;Port=5432;Database=hermes;User Id=erwann;Password=lapinou";
+        string Conx = "Server=195.154.107.234;Port=5432;Database=hermes;User Id=dev;Password=1lOv3*y0U";
             NpgsqlCommand MyCmd = null;
             NpgsqlConnection MyCnx = null;
 
