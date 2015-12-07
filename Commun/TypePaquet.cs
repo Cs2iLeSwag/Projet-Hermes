@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Accueil
+namespace WindowsFormsApplication1
 {
     public enum TypePaquet
     {
@@ -25,7 +25,7 @@ namespace Accueil
         }
 
         //Méthode statique pour l'envoi et la réception
-        public static void Send(Paquet paquet, NetworkStream stream)
+        public void Send(Paquet paquet, NetworkStream stream)
         {
             BinaryFormatter bf = new BinaryFormatter();
 
