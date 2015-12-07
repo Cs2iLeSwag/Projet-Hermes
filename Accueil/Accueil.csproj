@@ -60,6 +60,9 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ftplib">
+      <HintPath>..\..\..\..\Desktop\ftplib.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Security">
       <HintPath>..\..\..\..\Desktop\test\Mono.Security.dll</HintPath>
     </Reference>
@@ -151,7 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\songOn.png" />
+    <None Include="Resources\avatar1.png" />
     <Content Include="Resources\Avatar\test01.png" />
+    <None Include="Resources\u.png" />
     <None Include="Resources\connecterBouton.png" />
     <None Include="Resources\logo.png" />
     <None Include="Resources\eye.png" />

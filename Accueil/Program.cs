@@ -35,5 +35,12 @@ namespace Accueil
                 MessageBox.Show("Erreur de connexion");
             }*/
         }
+
+        internal static void DisplayText(string p)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static int IntTotalAllowedConnectionAttempts { get; set; }
     }
 }

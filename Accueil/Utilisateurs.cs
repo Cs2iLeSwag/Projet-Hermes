@@ -60,5 +60,18 @@ namespace Accueil
                 MyCnx.Close();
                 return MyData;
             }
+
+            public void updateSituation(int statut, int id)
+            {
+                DataTable MyData = new DataTable();
+                MyCnx = new NpgsqlConnection(Conx);
+                MyCnx.Open();
+                string select = "UPDATE \"U_USER\" SET \"statut\"=:statut WHERE \"idUser\"=:id";
+                MyCmd = new NpgsqlCommand(select, MyCnx);
+                MyCmd.Parameters.Add(new NpgsqlParameter("statut", NpgsqlDbType.Integer)).Value = statut;
+                MyCmd.Parameters.Add(new NpgsqlParameter("id", NpgsqlDbType.Integer)).Value = id;
+                MyCmd.ExecuteNonQuery();
+                MyCnx.Close();
+            }
     }
 }
