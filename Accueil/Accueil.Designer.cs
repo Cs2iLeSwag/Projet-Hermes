@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.lblName = new System.Windows.Forms.Label();
             this.btnDiscussion = new System.Windows.Forms.Button();
             this.btnSong = new System.Windows.Forms.Button();
@@ -151,9 +152,9 @@
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(531, 2);
+            this.listBox1.Location = new System.Drawing.Point(531, 93);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(181, 364);
+            this.listBox1.Size = new System.Drawing.Size(181, 273);
             this.listBox1.TabIndex = 12;
             // 
             // Accueil
@@ -171,6 +172,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.imgAvatar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Accueil";
             this.Text = "Accueil";
             this.Load += new System.EventHandler(this.Accueil_Load);

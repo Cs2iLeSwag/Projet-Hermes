@@ -26,10 +26,10 @@ namespace Accueil
         {
 
             var fileName = Path.GetFileName(@filePath);
-            var request = (FtpWebRequest)WebRequest.Create("ftp://195.154.107.234/");
+            var request = (FtpWebRequest)WebRequest.Create("ftp://195.154.107.234/var/www/html/image");
 
             request.Method = WebRequestMethods.Ftp.UploadFile;
-            request.Credentials = new NetworkCredential("hermes", "U3IleJnC3O");
+            request.Credentials = new NetworkCredential("hermes", "U3IleJnC3pO");
             request.UsePassive = true;
             request.UseBinary = true;
             request.KeepAlive = false;
@@ -51,7 +51,7 @@ namespace Accueil
 
         public static void ftpFile(string pathFile, string codeName)
         {
-            using (FtpConnection ftp = new FtpConnection("195.154.107.234", 22, "hermes", "U3IleJnC3pO"))
+            using (FtpConnection ftp = new FtpConnection("195.154.107.234/var/www/html/image", 22, "hermes", "U3IleJnC3pO"))
             {
 
                 ftp.Open(); /* Open the FTP connection */
