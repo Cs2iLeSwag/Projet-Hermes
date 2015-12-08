@@ -9,7 +9,7 @@ using System.IO;
 using System.Threading;
 
 using Commun;
-using Accueil;
+using WindowsFormsApplication1;
 
 //Un simple TcpListener gérant plusiquers connexions grâce au thread
 
@@ -19,7 +19,7 @@ namespace Socket_Serveur
     {
         static void Main(string[] args)
         {
-            TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 1800);
+            TcpListener listener = new TcpListener(IPAddress.Parse("195.154.107.234"), 1523);
             listener.Start();
 
             while (true)
@@ -29,6 +29,8 @@ namespace Socket_Serveur
                 Thread t = new Thread(ts);
                 t.Start(client);
             }
+
+            listener.Stop();
         }
 
         public static void acceptConnection(object obj)

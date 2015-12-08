@@ -12,7 +12,7 @@ using Commun;
 
 //Un simple TcpListener gérant plusiquers connexions grâce au thread
 
-namespace Accueil
+namespace WindowsFormsApplication1
 {
     [Serializable()]
     public class AuthPaquet : Paquet

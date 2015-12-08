@@ -153,6 +153,9 @@
     <None Include="Resources\songOff.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Mono.Security.dll" />
+    <Content Include="Npgsql.dll" />
+    <Content Include="Npgsql.resources.dll" />
     <Content Include="Properties\songOn.png" />
     <None Include="Resources\avatar1.png" />
     <Content Include="Resources\Avatar\test01.png" />
@@ -168,6 +171,10 @@
     <ProjectReference Include="..\Commun\Commun.csproj">
       <Project>{d51db238-494f-4f45-9f41-ff1b849acb3f}</Project>
       <Name>Commun</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Socket_Serveur\Socket_Serveur.csproj">
+      <Project>{a3aa4285-620d-417d-9d0c-325f3606bcf0}</Project>
+      <Name>Socket_Serveur</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
