@@ -36,6 +36,7 @@
             this.btnConnexion = new System.Windows.Forms.Button();
             this.imgAvatar = new System.Windows.Forms.PictureBox();
             this.btnImgChange = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             // 
             // btnDiscussion
             // 
-            this.btnDiscussion.Location = new System.Drawing.Point(631, 51);
+            this.btnDiscussion.Location = new System.Drawing.Point(46, 320);
             this.btnDiscussion.Name = "btnDiscussion";
             this.btnDiscussion.Size = new System.Drawing.Size(73, 29);
             this.btnDiscussion.TabIndex = 6;
@@ -128,6 +129,8 @@
             this.imgAvatar.TabIndex = 10;
             this.imgAvatar.TabStop = false;
             this.imgAvatar.Click += new System.EventHandler(this.imgAvatar_Click);
+            this.imgAvatar.MouseEnter += new System.EventHandler(this.imgAvatar_MouseEnter_1);
+            this.imgAvatar.MouseLeave += new System.EventHandler(this.imgAvatar_MouseLeave_1);
             // 
             // btnImgChange
             // 
@@ -144,12 +147,22 @@
             this.btnImgChange.MouseEnter += new System.EventHandler(this.btnImgChange_MouseEnter);
             this.btnImgChange.MouseLeave += new System.EventHandler(this.btnImgChange_MouseLeave);
             // 
+            // listBox1
+            // 
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(531, 2);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(181, 364);
+            this.listBox1.TabIndex = 12;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.ClientSize = new System.Drawing.Size(713, 361);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnImgChange);
             this.Controls.Add(this.btnSong);
             this.Controls.Add(this.btnHG);
@@ -177,5 +190,6 @@
         private System.Windows.Forms.Button btnHG;
         private System.Windows.Forms.Button btnSong;
         private System.Windows.Forms.Button btnImgChange;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

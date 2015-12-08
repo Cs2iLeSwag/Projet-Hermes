@@ -18,6 +18,9 @@ namespace Accueil
         static int codeUser;
         Image songOn = Properties.Resources.songOn;
         Image songOff = Properties.Resources.songOff;
+        Image connect = Properties.Resources.connect;
+        Image connectOff = Properties.Resources.connectOff;
+        Image connectPause = Properties.Resources.connectPause;
 
         public static void UploadFileToFtp(string filePath)
         {
@@ -89,6 +92,7 @@ namespace Accueil
             InitializeComponent();
             Utilisateurs u = new Utilisateurs();
             DataTable d = u.SelectOneUser(id);
+            DataTable d2 = u.SelectAllUsers();
             foreach (DataRow row in d.Rows)
             {
                lblName.Text = row["nom"].ToString() + " "   + row["prenom"].ToString();
@@ -113,6 +117,25 @@ namespace Accueil
             }
             btnImgChange.Visible = false;
             codeUser = id;
+            
+             foreach (DataRow row in d2.Rows)
+             {
+                 if (row["statut"].Equals(1))
+                 {
+                     listBox1.Items.Add(row["nom"] + " " + row["prenom"]);
+
+                 }
+                 else if (row["statut"].Equals(2))
+                 {
+                     listBox1.Items.Add(row["nom"] + " " + row["prenom"]);
+                 }
+                 else
+                 {
+                     listBox1.Items.Add(row["nom"] + " " + row["prenom"]);
+                 }
+                 
+
+             }
         }
 
         private void Accueil_Load(object sender, EventArgs e)
@@ -280,6 +303,21 @@ namespace Accueil
         private void btnImgChange_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgAvatar_MouseEnter_1(object sender, EventArgs e)
+        {
+            btnImgChange.Visible = true;
+        }
+
+        private void imgAvatar_MouseLeave_1(object sender, EventArgs e)
+        {
+            btnImgChange.Visible = false;
         }
 
     }
