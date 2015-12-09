@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.lblName = new System.Windows.Forms.Label();
-            this.btnDiscussion = new System.Windows.Forms.Button();
             this.btnSong = new System.Windows.Forms.Button();
             this.btnHG = new System.Windows.Forms.Button();
             this.btnAbsence = new System.Windows.Forms.Button();
@@ -51,16 +50,6 @@
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Batiste Mouton";
             this.lblName.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnDiscussion
-            // 
-            this.btnDiscussion.Location = new System.Drawing.Point(46, 320);
-            this.btnDiscussion.Name = "btnDiscussion";
-            this.btnDiscussion.Size = new System.Drawing.Size(73, 29);
-            this.btnDiscussion.TabIndex = 6;
-            this.btnDiscussion.Text = "Discussion";
-            this.btnDiscussion.UseVisualStyleBackColor = true;
-            this.btnDiscussion.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnSong
             // 
@@ -156,6 +145,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(181, 273);
             this.listBox1.TabIndex = 12;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Accueil
             // 
@@ -168,7 +158,6 @@
             this.Controls.Add(this.btnSong);
             this.Controls.Add(this.btnHG);
             this.Controls.Add(this.btnAbsence);
-            this.Controls.Add(this.btnDiscussion);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnConnexion);
             this.Controls.Add(this.imgAvatar);
@@ -187,7 +176,6 @@
         private System.Windows.Forms.PictureBox imgAvatar;
         private System.Windows.Forms.Button btnConnexion;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Button btnDiscussion;
         private System.Windows.Forms.Button btnAbsence;
         private System.Windows.Forms.Button btnHG;
         private System.Windows.Forms.Button btnSong;

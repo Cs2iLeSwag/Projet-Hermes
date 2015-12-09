@@ -26,6 +26,7 @@ namespace Accueil
 
         public Discussion()
         {
+            
             InitializeComponent();
             try
             {
@@ -147,6 +148,11 @@ namespace Accueil
                 richTxtBoxMessage.Focus();
 
             }
+        }
+
+        private void Discussion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

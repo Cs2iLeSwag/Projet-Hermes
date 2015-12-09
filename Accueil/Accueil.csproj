@@ -153,9 +153,6 @@
     <None Include="Resources\songOff.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mono.Security.dll" />
-    <Content Include="Npgsql.dll" />
-    <Content Include="Npgsql.resources.dll" />
     <Content Include="Properties\songOn.png" />
     <None Include="Resources\avatar1.png" />
     <Content Include="Resources\Avatar\test01.png" />

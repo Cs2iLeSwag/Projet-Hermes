@@ -21,70 +21,86 @@ namespace Accueil
         Image connect = Properties.Resources.connect;
         Image connectOff = Properties.Resources.connectOff;
         Image connectPause = Properties.Resources.connectPause;
-
-        public static void UploadFileToFtp(string filePath)
+        private static void UploadFileToFTP(string source)
         {
-
-            var fileName = Path.GetFileName(@filePath);
-            var request = (FtpWebRequest)WebRequest.Create("ftp://195.154.107.234/var/www/html/image");
-
-            request.Method = WebRequestMethods.Ftp.UploadFile;
-            request.Credentials = new NetworkCredential("hermes", "U3IleJnC3pO");
-            request.UsePassive = true;
-            request.UseBinary = true;
-            request.KeepAlive = false;
-
-            using (var fileStream = File.OpenRead(@filePath))
+            try
             {
-                using (var requestStream = request.GetRequestStream())
-                {
-                    fileStream.CopyTo(requestStream);
-                MessageBox.Show(fileName);
-                    requestStream.Close();
-                }
-            }
+                string filename = Path.GetFileName(source);
+                string ftpfullpath = "ftp://195.154.107.234/var/www/html/image";
+                FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
+                ftp.Credentials = new NetworkCredential("hermes", "U3IleJnC3pO");
+                ftp.KeepAlive = true;
+                ftp.UseBinary = true;
+                ftp.Method = WebRequestMethods.Ftp.UploadFile;
 
-            var response = (FtpWebResponse)request.GetResponse();
-            Console.WriteLine("Upload done: {0}", response.StatusDescription);
-            response.Close();
+                FileStream fs = File.OpenRead(source);
+                byte[] buffer = new byte[fs.Length];
+                fs.Read(buffer, 0, buffer.Length);
+                fs.Close();
+
+                Stream ftpstream = ftp.GetRequestStream();
+                ftpstream.Write(buffer, 0, buffer.Length);
+                ftpstream.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public static void ftpFile(string pathFile, string codeName)
+        /*public void Download(string filename)
         {
-            using (FtpConnection ftp = new FtpConnection("195.154.107.234/var/www/html/image", 22, "hermes", "U3IleJnC3pO"))
-            {
+            string destination = "c:/"
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://195.154.107.234/var/www/html/image/connect.png");
 
-                ftp.Open(); /* Open the FTP connection */
-                ftp.Login(); /* Login using previously provided credentials */
+            request.Method = WebRequestMethods.Ftp.DownloadFile;
 
-                if (ftp.DirectoryExists("/utilisateur")) /* check that a directory exists */
-                    ftp.SetCurrentDirectory("/utilisateur"); /* change current directory */
+            request.Credentials = new NetworkCredential("hermes", "U3IleJnC3pO");
 
-                if (ftp.FileExists(codeName))  /* check that a file exists */
-                    ftp.GetFile(codeName, false); /* download /incoming/file.txt as file.txt to current executing directory, overwrite if it exists */
+            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 
-                //do some processing
+            Stream responseStream = response.GetResponseStream();
 
-                try
-                {
-                    ftp.PutFile(@pathFile, codeName); /* upload c:\localfile.txt to the current ftp directory as file.txt */
-                }
-                catch (FtpException e)
-                {
-                    Console.WriteLine(String.Format("FTP Error: {0} {1}", e.ErrorCode, e.Message));
-                }
+            StreamReader reader = new StreamReader(responseStream);
 
-                /*foreach (var dir in ftp.GetDirectories("/incoming/processed"))
-                {
-                    Console.WriteLine(dir.Name);
-                    Console.WriteLine(dir.CreationTime);
-                    foreach (var file in dir.GetFiles())
-                    {
-                        Console.WriteLine(file.Name);
-                        Console.WriteLine(file.LastAccessTime);
-                    }
-                }*/
-            }
+            StreamWriter writer = new StreamWriter(destination);
+
+            writer.Write(reader.ReadToEnd());
+
+            writer.Close();
+
+            reader.Close();
+
+            response.Close() ;
+        }*/
+        public void UploadFile(string source)
+        {
+            string filename = Path.GetFileName(source);
+
+            FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://195.154.107.234/var/www/html/image/connect.png");
+
+            request.Method = WebRequestMethods.Ftp.UploadFile;
+
+            request.Credentials = new NetworkCredential("hermes", "U3IleJnC3pO");
+
+            StreamReader sourceStream = new StreamReader(source);
+
+            byte[] fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
+
+            request.ContentLength = fileContents.Length;
+
+            Stream requestStream = request.GetRequestStream();
+
+            requestStream.Write(fileContents, 0, fileContents.Length);
+
+            FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+
+            response.Close();
+
+            requestStream.Close();
+
+            sourceStream.Close();
+
         }
 
         public Accueil(int id)
@@ -230,9 +246,9 @@ namespace Accueil
             if (f.ShowDialog() == DialogResult.OK)
             {
                 string fileName = f.FileName;
-                MessageBox.Show(fileName);
+                //MessageBox.Show(fileName);
                 string codeName = lblName.Text.Replace(" ", "_");
-                UploadFileToFtp(fileName);
+                UploadFile(fileName);
             }
             else
                 return;
@@ -246,8 +262,8 @@ namespace Accueil
             {
                 string fileName = f.FileName;
                 string codeName = lblName.Text.Replace(" ", "_");
-                MessageBox.Show(fileName);
-                UploadFileToFtp(fileName);
+                //MessageBox.Show(fileName);
+                UploadFile(fileName);
             }
             else
                 return;
@@ -318,6 +334,13 @@ namespace Accueil
         private void imgAvatar_MouseLeave_1(object sender, EventArgs e)
         {
             btnImgChange.Visible = false;
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Accès à l'écran Discussion
+            Discussion discussion = new Discussion();
+            discussion.Show();
         }
 
     }

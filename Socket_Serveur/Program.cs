@@ -41,6 +41,8 @@ namespace Socket_Serveur
 
             Paquet paquet = Paquet.Receive(stream);
 
+            Console.WriteLine("Hello World, client connecté");
+
             if (paquet is AuthPaquet)
             {
                 AuthPaquet ap = (AuthPaquet)paquet;
