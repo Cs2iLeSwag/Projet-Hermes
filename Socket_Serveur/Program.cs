@@ -19,7 +19,7 @@ namespace Socket_Serveur
     {
         static void Main(string[] args)
         {
-            TcpListener listener = new TcpListener(IPAddress.Parse("195.154.107.234"), 1800);
+            TcpListener listener = new TcpListener(IPAddress.Parse("192.168.43.169"), 2456);
             listener.Start();
 
             while (true)
