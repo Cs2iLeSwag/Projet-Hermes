@@ -21,30 +21,12 @@ namespace Accueil
         Image connect = Properties.Resources.connect;
         Image connectOff = Properties.Resources.connectOff;
         Image connectPause = Properties.Resources.connectPause;
-        private static void UploadFileToFTP(string source)
+        private static void UploadFile(string source)
         {
-            try
+            using (System.Net.WebClient client = new System.Net.WebClient())
             {
-                string filename = Path.GetFileName(source);
-                string ftpfullpath = "ftp://195.154.107.234/var/www/html/image";
-                FtpWebRequest ftp = (FtpWebRequest)FtpWebRequest.Create(ftpfullpath);
-                ftp.Credentials = new NetworkCredential("hermes", "U3IleJnC3pO");
-                ftp.KeepAlive = true;
-                ftp.UseBinary = true;
-                ftp.Method = WebRequestMethods.Ftp.UploadFile;
-
-                FileStream fs = File.OpenRead(source);
-                byte[] buffer = new byte[fs.Length];
-                fs.Read(buffer, 0, buffer.Length);
-                fs.Close();
-
-                Stream ftpstream = ftp.GetRequestStream();
-                ftpstream.Write(buffer, 0, buffer.Length);
-                ftpstream.Close();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                client.Credentials = new System.Net.NetworkCredential("hermes", "U3IleJnC3pO");
+                client.UploadFile("ftp://195.154.107.234/var/www/html/image" + "/" + new FileInfo("test").Name, "STOR", source);
             }
         }
 
@@ -73,7 +55,7 @@ namespace Accueil
 
             response.Close() ;
         }*/
-        public void UploadFile(string source)
+        public void UploadFile2(string source)
         {
             string filename = Path.GetFileName(source);
 
