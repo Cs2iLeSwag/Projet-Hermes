@@ -91,7 +91,6 @@ namespace Accueil
                     IPEndPoint ip = null;
                     byte[] data = ecouteur.Receive(ref ip);
                     lstBoxMessage.Items.Add("Moi : " + richTxtBoxMessage.Text);
-                    //Faire un FLUSH pour envoyer les données
                 }
                 catch
                 {
