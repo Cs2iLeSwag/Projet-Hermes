@@ -63,6 +63,16 @@ namespace Accueil.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avatar {
+            get {
+                object obj = ResourceManager.GetObject("avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap connect {
             get {
                 object obj = ResourceManager.GetObject("connect", resourceCulture);
@@ -136,6 +146,16 @@ namespace Accueil.Properties {
         internal static System.Drawing.Bitmap songOn {
             get {
                 object obj = ResourceManager.GetObject("songOn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap u {
+            get {
+                object obj = ResourceManager.GetObject("u", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
