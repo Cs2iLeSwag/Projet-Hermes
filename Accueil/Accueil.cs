@@ -21,13 +21,37 @@ namespace Accueil
         Image connect = Properties.Resources.connect;
         Image connectOff = Properties.Resources.connectOff;
         Image connectPause = Properties.Resources.connectPause;
-        private static void UploadFile(string source)
+        private static void UploadFile(string source, string codeName)
         {
-            using (System.Net.WebClient client = new System.Net.WebClient())
+            //MessageBox.Show(source);
+            FtpWebRequest ftpClient = (FtpWebRequest)FtpWebRequest.Create("ftp://195.154.107.234/" + codeName + ".png");
+            ftpClient.Credentials = new System.Net.NetworkCredential("hermes", "U3IleJnC3pO");
+            ftpClient.Method = System.Net.WebRequestMethods.Ftp.UploadFile;
+            ftpClient.UseBinary = true;
+            ftpClient.KeepAlive = true;
+            System.IO.FileInfo fi = new System.IO.FileInfo(source);
+            ftpClient.ContentLength = fi.Length;
+            byte[] buffer = new byte[4097];
+            int bytes = 0;
+            int total_bytes = (int)fi.Length;
+            System.IO.FileStream fs = fi.OpenRead();
+            System.IO.Stream rs = ftpClient.GetRequestStream();
+            while (total_bytes > 0)
             {
-                client.Credentials = new System.Net.NetworkCredential("hermes", "U3IleJnC3pO");
-                client.UploadFile("ftp://195.154.107.234/var/www/html/image" + "/" + new FileInfo("test").Name, "STOR", source);
+                bytes = fs.Read(buffer, 0, buffer.Length);
+                rs.Write(buffer, 0, bytes);
+                total_bytes = total_bytes - bytes;
             }
+            fs.Flush();
+            fs.Close();
+            rs.Close();
+            FtpWebResponse uploadResponse = (FtpWebResponse)ftpClient.GetResponse();
+            string value = uploadResponse.StatusDescription;
+            if (value != "OK")
+            {
+                MessageBox.Show(value);
+            }
+            uploadResponse.Close();
         }
 
         /*public void Download(string filename)
@@ -230,7 +254,7 @@ namespace Accueil
                 string fileName = f.FileName;
                 //MessageBox.Show(fileName);
                 string codeName = lblName.Text.Replace(" ", "_");
-                UploadFile(fileName);
+                UploadFile(fileName, codeName);
             }
             else
                 return;
@@ -245,7 +269,7 @@ namespace Accueil
                 string fileName = f.FileName;
                 string codeName = lblName.Text.Replace(" ", "_");
                 //MessageBox.Show(fileName);
-                UploadFile(fileName);
+                UploadFile(fileName, codeName);
             }
             else
                 return;

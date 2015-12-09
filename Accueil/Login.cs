@@ -64,6 +64,7 @@ namespace Accueil
                     Accueil accueil = new Accueil(id);
                     accueil.Show();
                     this.Hide();
+                    //this.Close(); 
                 }
             }
             else
