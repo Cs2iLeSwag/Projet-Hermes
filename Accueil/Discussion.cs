@@ -32,7 +32,7 @@ namespace Accueil
             {
                 //On crée automatiquement le client qui sera en charge d'envoyer les messages au serveur.
                 _client = new UdpClient();
-                _client.Connect("195.154.107.234", 1800);
+                _client.Connect("195.154.107.234", 5022);
 
                 //Initialisation des objets nécessaires au client. On lance également le thread qui en charge d'écouter.
                 _continuer = true;
